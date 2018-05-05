@@ -1,6 +1,7 @@
 {
   "name": "react-native-android-circles",
-  "description": "A react native android package to show a circle progress view.",
+  "description":
+    "A react native android package to show a circle progress view.",
   "version": "0.3.0",
   "main": "index.android.js",
   "author": {
@@ -12,12 +13,8 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "react-native": ">= 0.25.0"
+    "react-native": ">= 0.25.0",
+    "proptypes": "1.1.0"
   },
-  "keywords": [
-    "react-component",
-    "react-native",
-    "android",
-    "progress bar"
-  ]
+  "keywords": ["react-component", "react-native", "android", "progress bar"]
 }

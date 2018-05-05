@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
-var React = require('react');
-var ReactNative = require('react-native');
+var React = require("react");
+var ReactNative = require("react-native");
+var PropTypes = require("proptypes");
 
 var { NativeModules, requireNativeComponent, View } = ReactNative;
-var { PropTypes } = React;
 
 class CirclesAndroid extends React.Component {
   spin() {
@@ -13,7 +13,7 @@ class CirclesAndroid extends React.Component {
       NativeModules.UIManager.RCTCircles.Commands.spin,
       []
     );
-  };
+  }
 
   stopSpinning() {
     NativeModules.UIManager.dispatchViewManagerCommand(
@@ -21,10 +21,10 @@ class CirclesAndroid extends React.Component {
       UIManager.RCTCircles.Commands.stopSpinning,
       []
     );
-  };
+  }
 
   render() {
-    return  <NativeCirclesAndroid {...this.props} />;
+    return <NativeCirclesAndroid {...this.props} />;
   }
 }
 CirclesAndroid.propTypes = {
@@ -50,14 +50,14 @@ CirclesAndroid.propTypes = {
   unitColor: PropTypes.string,
   unitScale: PropTypes.number,
   unitSize: PropTypes.number,
-  animated:  PropTypes.bool,
+  animated: PropTypes.bool,
   text: PropTypes.string,
-  textMode: PropTypes.oneOf(['text', 'value', 'percent']),
+  textMode: PropTypes.oneOf(["text", "value", "percent"]),
   spinColor: PropTypes.string,
   spinSpeed: PropTypes.number,
-  spinBarLength: PropTypes.number,
+  spinBarLength: PropTypes.number
 };
 
-var NativeCirclesAndroid = requireNativeComponent('RCTCircles', CirclesAndroid);
+var NativeCirclesAndroid = requireNativeComponent("RCTCircles", CirclesAndroid);
 
 module.exports = CirclesAndroid;
